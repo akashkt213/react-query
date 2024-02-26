@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query';
-import { fetchPosts } from './component/api';
+import { fetchPosts } from './api/api';
+import PostLists from './components/PostLists';
 
 function App() {
   const {data,isLoading}=useQuery({
@@ -11,7 +12,9 @@ function App() {
   console.log(data,isLoading);
 
   return (
-    <div>App</div>
+    <>
+    <PostLists/>
+    </>
   )
 }
 
